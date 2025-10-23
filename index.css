@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg") center center;
+    background:linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)),url("https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg") center center;
     background-size:cover;
     width:100vw;
     height:100vh;
@@ -25,7 +25,7 @@ body {
     animation: rotate 0.56s infinite linear;
     width:50px;
     height:50px;
-    border:12px solid #fff;
+    border:12px solid #eee1ba;
     border-bottom:12px solid rgb(195,121,96);
     border-radius:50%;
     margin:0;
@@ -62,7 +62,7 @@ body {
 #menu a {
     margin:0px 6%;
     font-size:19px;
-    color:#fff;
+    color:#eee1ba;
     text-decoration:underline;
 }
 #middle {
@@ -75,11 +75,11 @@ body {
     top:0;
     text-align:center;
     z-index:1;
-    color:#fff;
+    color:#eee1ba;
     padding-bottom:10vh;
 }
 #middle h1 {
-    color:rgb(195,121,96);
+    color:rgb(238,225,186);
     font-size:70px;
     /*
     text-decoration:underline;
@@ -91,7 +91,7 @@ body {
     text-align: center;
     font-size: 25px;
     background: transparent;
-    color: #fff;
+    color: #eee1ba;
     position: fixed;
     top: 0;
     right: 45vw;
@@ -110,7 +110,7 @@ body {
     font-size:25px;
     transform:rotate(-90deg);
     background:transparent;
-    color:#fff;
+    color:#eee1ba;
     position:fixed;
     left:0;
     bottom:40vh;
@@ -128,7 +128,7 @@ body {
     font-size:25px;
     transform:rotate(90deg);
     background:transparent;
-    color:#fff;
+    color:#eee1ba;
     position:fixed;
     right:0;
     bottom:40vh;
@@ -145,7 +145,7 @@ body {
     text-align:center;
     font-size:25px;
     background:transparent;
-    color:#fff;
+    color:#eee1ba;
     position:fixed;
     bottom:0;
     left:45vw;
@@ -173,15 +173,15 @@ body {
     cursor:pointer;
 }
 #middle table {
-    width:30%;
+    width:15%;
     margin:6vh auto;
 }
 #middle table tr td {
     text-align:center;
 }
 .social {
-    color:#fff;
-    font-size:22px;
+    color:#eee1ba;
+    font-size:34px;
     border-radius:50%;
     transition:0.4s ease-in-out;
     margin:0px 8px;
@@ -196,7 +196,7 @@ body {
     height:90vh;
     padding:5vh 5vw;
     background:rgb(195,121,96);
-    color:#fff;
+    color:#eee1ba;
     z-index:9;
     position:fixed;
     max-height:100vh;
@@ -218,7 +218,7 @@ body {
     font-size:14px !important;
     display:inline-block;
     padding:8px 10px;
-    border:2px solid #fff;
+    border:2px solid #eee1ba;
     margin:0px 10px;
     border-radius:50px;
 }
@@ -237,10 +237,10 @@ body {
 }
 .btn_one {
     font-size:18px;
-    font-family: 'Josefin Sans', sans-serif;
-    color:#fff;
+    font-family: 'Cormorant Garamond', serif;
+    color:#eee1ba;
     background:transparent;
-    border:3px solid #fff;
+    border:3px solid #eee1ba;
     padding:8px 40px;
     border-radius:80px;
     font-weight:bold;
@@ -250,14 +250,14 @@ body {
 .btn_one:hover {
     cursor:pointer;
     color:rgb(195,121,96);
-    background:#fff;
+    background:#eee1ba;
 }
 .btn_two {
     font-size:18px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     color:rgb(195,121,96);
     background:#fff;
-    border:3px solid #fff;
+    border:3px solid #eee1ba;
     padding:8px 40px;
     border-radius:80px;
     font-weight:bold;
@@ -278,7 +278,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size:18px;
     transition:0.4s ease-in-out;
-    color:#fff;
+    color:#eee1ba;
     font-weight:bold;
 }
 .container form textarea {
@@ -293,7 +293,7 @@ body {
     background:transparent;
     resize:none;
     transition:0.4s ease-in-out;
-    color:#fff;
+    color:#eee1ba;
     font-weight:bold;
 }
 .container form input:focus {
@@ -305,10 +305,10 @@ body {
     border-bottom:3px solid rgba(255, 255, 255,1);
 }
 ::placeholder {
-    color:#fff;
+    color:#eee1ba;
 }
 #footer {
-    color:#fff;
+    color:#eee1ba;
     width:92vw;
     padding:5vh 4vw;
     text-align:right;
@@ -331,7 +331,7 @@ body {
     height:5px;
 }
 ::-webkit-scrollbar-track {
-    background: #fff; 
+    background: #eee1ba; 
 }
 ::-webkit-scrollbar-thumb {
     background: rgb(195,121,96); 
@@ -340,7 +340,7 @@ body {
     background: rgba(195,121,96,0.8); 
 }
 ::selection {
-	color: #fff;
+	color: #eee1ba;
 	background: rgb(195,121,96);
 }
 
