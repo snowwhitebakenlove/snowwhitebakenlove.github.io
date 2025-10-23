@@ -3,7 +3,7 @@
 body {
     padding:0px;
     margin:0px;
-    background:linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)),url("https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg") center center;
+    background:linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)),url("./assets/main_bg.jpeg") center center;
     background-size:cover;
     width:100vw;
     height:100vh;
@@ -21,6 +21,60 @@ body {
     margin: 0 auto;
 }
 
+#work_container {
+    background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/menu-bg.jpg'); /* Replace with your actual image path */
+    background-size: cover;      /* Makes the image cover the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    color: #eee1ba;                 /* Makes text readable over the image */
+}
+#work_container .center-content {
+    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+
+#about_container {
+    background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/about-bg.jpg'); /* Replace with your actual image path */
+    background-size: cover;      /* Makes the image cover the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: repeat;
+    color: #eee1ba;                 /* Makes text readable over the image */
+}
+#about_container .center-content {
+    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#projects_container {
+    background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/projects-bg.jpg'); /* Replace with your actual image path */
+    background-size: cover;      /* Makes the image cover the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: repeat;
+    color: #eee1ba;                 /* Makes text readable over the image */
+}
+#projects_container .center-content {
+    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#contact_container {
+    background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/contact-bg.jpg'); /* Replace with your actual image path */
+    background-size: cover;      /* Makes the image cover the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: repeat;
+    color: #eee1ba;                 /* Makes text readable over the image */
+}
+#contact_container .center-content {
+    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    padding: 30px;
+    border-radius: 10px;
+}
+
 h1 {
     display: flex;
     padding: 15px 25px;
@@ -31,11 +85,11 @@ h1 {
     border: 5px solid #eee1ba;
     position: relative;
     color: #eee1ba;
-    background: linear-gradient(90deg, #eee1ba, #894e3f, #eee1ba);
+    background: linear-gradient(90deg, #eee1ba, #d29985, #eee1ba);
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: softGlow 5s ease-in-out infinite, gradientMove 5s linear infinite;
+    animation: softGlow 5s ease-in-out infinite;
     box-shadow: 0 0 5px #eee1ba, 0 0 10px rgba(201,130,118,0.5);
 }
 
@@ -58,7 +112,7 @@ h1 {
         background-position: 0%;
     }
     100% {
-        background-position: 200%;
+        background-position: 300%;
     }
 }
 
@@ -80,6 +134,7 @@ h1 .subtext-vertical {
     text-orientation: mixed;    /* rotate letters naturally */
     font-size: 30%;       /* smaller than SNOW WHITE */
     color: #eee1ba;
+    text-shadow: 2px 2px 5px #c97f76, 0 0 10px #eee1ba;
     font-weight: 400;
 }
 
@@ -314,7 +369,7 @@ h1 .subtext-vertical {
     */
 }
 .container p {
-    font-size:25px;
+    font-size:22px;
 }
 .btn_one {
     font-size:20px;

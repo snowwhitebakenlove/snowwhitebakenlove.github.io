@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snow White | Bake & Love</title>
+    <link rel="icon" type="image" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">OUR STORY</a>
+    <a id="contact" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">MENU</a>
+    <a id="work" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">CONTACT</a>
+    <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">CATERING</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
+        <h1><span class="highlight">SNOW WHITE</span> | <span class="subtext-vertical">Bake n Love</span></h1>
+        <h2>Cakes | Cookies | Boba Tea </h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">menu</a>
+            <a onclick="showprojects()">catering</a>
+            <a onclick="showcontact()">contact</a>
+        </div>
+        <table>
+            <tr>
+                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"
+                        href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank"><i class="fab fa-facebook"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"
+                        href="https://www.instagram.com/snowwhitebakenlove/" target="_blank"><i class="fab fa-instagram"></i></a></td>
+                <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"
+                        href="mailto:susan.nguyen2203@gmail.com"><i class="fab fa-google"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="projects_container" class="container">
+        <div onclick="closeprojects()"><i class="fas fa-angle-up"> 🥐 Back to Bakery </i></div>
+        <section class="center-content">
+            <h1>Catering</h1>
+            <h2>my work</h2>
+            <p>
+                Here are some of the projects I've worked on recently. Feel free to explore:
+            </p>
+            <ul>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Portfolio</h3>
+                        <p>The Open-Source code for the Personal Portfolio this website is coming from! A minimal and
+                            ambient portfolio template for Developers! ⚡</p>
+                        <button class="btn_one"><a
+                                href="https://github.com/TheKaushikGoswami/thekaushikgoswami.github.io"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Olympus</h3>
+                        <p>An Application commands-based multi-purpose discord bot that can do most of the things that
+                            you require for your discord server.</p>
+                        <button class="btn_one"><a href="https://github.com/TheKaushikGoswami/Olympus"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>Modmail Bot</h3>
+                        <p>A simple and efficient discord modmail bot written in Python language, using library named
+                            discord.py without any databse integration.</p>
+                        <button class="btn_one"><a href="https://github.com/TheKaushikGoswami/lyq-hangout-modmail"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+                <div class="project_card">
+                    <div class="project_info">
+                        <h3>100 Days, 100 Programs</h3>
+                        <p>An exhilarating journey of 100 Days, 100 Programs challenge, where I explore various programming languages and frameworks to build a diverse collection of practical applications. 🚀</p>
+                        <button class="btn_one"><a href="https://github.com/TheKaushikGoswami/100-Days-100-Programs"
+                                style="color: inherit; text-decoration: none"> View Project </a></button>
+                    </div>
+                </div>
+            </ul>
+        </section>
+        <div onclick="closeprojects()"><i class="fas fa-angle-up"> 🥐 Back to Bakery </i></div>
+    </div>
+
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"> 🥐 Back to Bakery </i></div>
+        <section class="center-content">
+            <h1>CONTACT</h1>
+            <p>
+                We’d love to hear from you! 
+                Whether you have a question about our pastries, want to place a catering order<sup id="fn1">1</sup>, 
+                or just want to say hello, you can reach us via:
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;<strong>Phone:</strong> (626) 360-9908</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Email:</strong> <a href="mailto:susan.nguyen2203@gmail.com">susan.nguyen2203@gmail.com</a></div>
+                <div><i class="fas fa-circle"></i>&nbsp;Instagram:</strong> <a href="https://www.instagram.com/snowwhitebakenlove" target="_blank">@snowwhitebakenlove</a></div>
+                <div><i class="fas fa-circle"></i>&nbsp;<strong>Facebook:</strong> <a href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank">Snow White Bake and Love</a></div>
+            </div>
+            <p>Or, send us a message directly using the form below:</p>
+            <form action="https://formcarry.com/s/JKNu0aGkeQ" method="POST" class="formcarry-form">
+                <input name="name" type="text" placeholder="Name" required />
+                <input name="email" type="email" placeholder="Email" required /><br>
+                <textarea name="message" placeholder="Your message" required rows="3"></textarea><br>
+                <button class="btn_one">Send</button>
+            </form>
+            <p>
+                We look forward to connecting with you and sharing the magic of our pastries!
+            </p>
+            <p class="footnote">
+                <sup id="fn1">1</sup> We respond to messages within 24 hours. Please allow extra time during holidays.</small>
+            </p>
+        </section>
+    </div>
+
+    <div id="about_container" class="container">
+        <div onclick="closeabout()"><i class="fas fa-angle-left"> 🥐 Back to Bakery </i></div>
+        <section class="center-content">
+            <h1>Our Story</h1>
+            <h2></h2>
+            <p>
+                Welcome to <strong>SNOW WHITE | Bake & Love</strong>, where traditional pastries meet a modern twist! 
+                Founded in <strong>2023</strong> in <strong>Durham, NC</strong>, our bakery was born from a passion for 
+                creating baked delights that are not only delicious but also spark joy. From our very first batch, we’ve been 
+                committed to blending the art of classic baking with innovative flavors and presentation. Our signature creation, 
+                the <strong>croffle</strong>, is a perfect example of this philosophy. 
+                Combining the buttery, flaky layers of a croissant with the golden crispiness of a waffle, each croffle is
+                carefully crafted to delight the senses. Beyond croffles, we take pride in our <strong>Asian bakery treats</strong> 
+                and <strong>traditional Vietnamese cakes</strong>, bringing authentic recipes to life while adding our own creative touch.
+            </p>
+            <p>
+                Whether you’re celebrating a special occasion, looking for the perfect gift, or just treating yourself, we make it easy to enjoy our baked creations. 
+                We offer <strong>catering services</strong> for events, <strong>online orders with delivery</strong> for your convenience, and <strong>local pick-up</strong> in Durham and Morrisville. 
+                No matter how you choose to enjoy our treats, we strive to make every experience memorable.
+                To complement our pastries, we also serve authentic <strong>Vietnamese coffee</strong> and refreshing <strong>boba tea</strong>, perfect for pairing with your favorite baked goods. 
+                From cozy mornings to festive celebrations, SNOW WHITE | Bake & Love is dedicated to creating moments of joy through every delicious bite and sip.
+            </p>
+            <p>
+                Our mission is simple: to bring happiness and connection through high-quality, handcrafted pastries, while honoring the rich traditions of Asian and Vietnamese baking. 
+                At SNOW WHITE | Bake & Love, every creation is made with <em>passion, love, and a sprinkle of magic</em> — because we believe every sweet moment deserves a little enchantment.
+            </p>
+
+            <h2>Our Services</h2>
+
+            <div class="services-summary">
+                <div class="service-item"><i class="fas fa-circle"></i> Catering</div>
+                <div class="service-item"><i class="fas fa-circle"></i> Custom Orders</div>
+                <div class="service-item"><i class="fas fa-circle"></i> Online Ordering</div>
+                <div class="service-item"><i class="fas fa-circle"></i> Local Pick-Up</div>
+            </div>
+
+            <ul class="services-list">
+                <li><strong>Catering for events and celebrations:</strong> Beautifully crafted pastry platters and desserts, perfect for weddings, birthdays, corporate events, and any special occasion.</li>
+                <li><strong>Custom orders and specialty cakes:</strong> Personalized flavors, designs, and themes to make your celebration truly one-of-a-kind.</li>
+                <li><strong>Online ordering with delivery:</strong> Enjoy your favorite baked goods conveniently delivered straight to your doorstep.</li>
+                <li><strong>Local pick-up:</strong> Place your order online and pick it up easily at our Durham or Morrisville locations.</li>
+            </ul>
+            
+            <p class="footnote">
+                <sup id="fn1">1</sup> All pastries are freshly baked daily. Some items may be seasonal.
+            </p>
+        </section>
+    </div>
+    
+    <div id="contact_container" class="container">
+        <div onclick="closecontact()"><i class="fas fa-angle-down"> 🥐 Back to Bakery </i></div>
+        <section class="center-content">
+            <h1>Menu</h1>
+            <p>
+                We’d love to hear from you! 
+                Whether you have a question about our pastries, want to place a catering order<sup id="fn1">1</sup>, 
+                or just want to say hello, you can reach us via:
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;<strong>Phone:</strong> (626) 360-9908</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Email:</strong> <a href="mailto:susan.nguyen2203@gmail.com">susan.nguyen2203@gmail.com</a></div>
+                <div><i class="fas fa-circle"></i>&nbsp;Instagram:</strong> <a href="https://www.instagram.com/snowwhitebakenlove" target="_blank">@snowwhitebakenlove</a></div>
+                <div><i class="fas fa-circle"></i>&nbsp;<strong>Facebook:</strong> <a href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank">Snow White Bake and Love</a></div>
+            </div>
+
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Web Designing</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Content Writing</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Graphic Designing</div>
+            </div>
+            <button class="btn_one"><a href="./assets/Kaushik_Resume.pdf" target="_blank"
+                    style="color: inherit; text-decoration: none">View
+                    Resume</a></button>
+
+            <p>
+                We look forward to connecting with you and sharing the magic of our pastries!
+            </p>
+
+            <p class="footnote">
+                <sup id="fn1">1</sup> We respond to messages within 24 hours. Please allow extra time during holidays.</small>
+            </p>
+        </section>
+        <div onclick="closecontact()"><i class="fas fa-angle-down"> 🥐 Back to Bakery </i></div>
+    </div>
+
+    <div id="footer">
+        © 2025 SNOW WHITE | Bake n Love <br> Follow us on Instagram: <a href="https://www.instagram.com/snowwhitebakenlove/" target="_blank">@snowwhitebakenlove</a>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
