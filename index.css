@@ -452,6 +452,20 @@ h1 .subtext-vertical {
     margin-top: 20px;
 }
 
+#work_container .footnote {
+    font-size: 16px;
+    color: rgba(238,225,186,0.7);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#projects_container .footnote {
+    font-size: 16px;
+    color: rgba(238,225,186,0.7);
+    text-align: center;
+    margin-top: 20px;
+}
+
 ::placeholder {
     color:#eee1ba;
 }
@@ -554,7 +568,7 @@ h1 .subtext-vertical {
 
     #middle h1 .highlight {
         padding: 25px 8px;         /* smaller padding inside gradient box */
-        font-size: 40px;
+        font-size: 44px;
     }
 
     #middle h2 {
