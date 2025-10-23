@@ -31,9 +31,8 @@ body {
     background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/menu-bg.jpg'); /* Replace with your actual image path */
     background-size: cover;      /* Makes the image cover the entire container */
     background-position: center; /* Centers the image */
-    background-repeat: no-repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
-    animation: panBackground 30s linear infinite;
+    animation: panBackground 120s linear infinite;
 }
 #work_container .center-content {
     background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
@@ -45,9 +44,8 @@ body {
     background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/about-bg.jpg'); /* Replace with your actual image path */
     background-size: cover;      /* Makes the image cover the entire container */
     background-position: center; /* Centers the image */
-    background-repeat: repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
-    animation: panBackground 30s linear infinite;
+    animation: panBackground 120s linear infinite;
 }
 #about_container .center-content {
     background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
@@ -59,9 +57,8 @@ body {
     background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/projects-bg.jpg'); /* Replace with your actual image path */
     background-size: cover;      /* Makes the image cover the entire container */
     background-position: center; /* Centers the image */
-    background-repeat: repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
-    animation: panBackground 30s linear infinite;
+    animation: panBackground 120s linear infinite;
 }
 #projects_container .center-content {
     background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
@@ -73,9 +70,8 @@ body {
     background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/contact-bg.jpg'); /* Replace with your actual image path */
     background-size: cover;      /* Makes the image cover the entire container */
     background-position: center; /* Centers the image */
-    background-repeat: repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
-    animation: panBackground 30s linear infinite;
+    animation: panBackground 120s linear infinite;
 }
 #contact_container .center-content {
     background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
@@ -346,7 +342,7 @@ h1 .subtext-vertical {
     display:none;
 }
 .container div {
-    font-size:20px;
+    font-size:25px;
     margin:20px 0px;
     transition:0.4s ease-in-out;
 }
@@ -357,7 +353,7 @@ h1 .subtext-vertical {
     margin:8vh 0px;
 }
 #used div{
-    font-size:18px !important;
+    font-size:22px !important;
     display:inline-block;
     padding:8px 10px;
     border:2px solid #eee1ba;
@@ -380,7 +376,7 @@ h1 .subtext-vertical {
     font-size:22px;
 }
 .btn_one {
-    font-size:20px;
+    font-size:22px;
     font-family: 'Cormorant Garamond', serif;
     color:#eee1ba;
     background:transparent;
@@ -397,7 +393,7 @@ h1 .subtext-vertical {
     background:#eee1ba;
 }
 .btn_two {
-    font-size:20px;
+    font-size:22px;
     font-family: 'Cormorant Garamond', serif;
     color:rgb(201,130,118);
     background:#fff;
@@ -580,6 +576,26 @@ h1 .subtext-vertical {
 	color: #eee1ba;
 	background: rgb(201,130,118);
 }
+
+.about-logo {
+    text-align: center;   /* centers the logo horizontally */
+    margin-bottom: 5px;  /* spacing between logo and heading */
+}
+
+.about-logo img {
+    width: 150px;         /* adjust size as needed */
+    height: auto;         /* keeps aspect ratio */
+    border-radius: 10px;  /* optional: rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* optional: subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.about-logo img:hover {
+    transform: scale(1.05); /* slight zoom on hover for effect */
+}
+
+
+
 
 @media (max-width: 768px){ 
     #projects {
