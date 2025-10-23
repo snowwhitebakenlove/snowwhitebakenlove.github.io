@@ -21,20 +21,25 @@ body {
     margin: 0 auto;
 }
 
+@keyframes panBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 #work_container {
     background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/menu-bg.jpg'); /* Replace with your actual image path */
     background-size: cover;      /* Makes the image cover the entire container */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
+    animation: panBackground 30s linear infinite;
 }
 #work_container .center-content {
-    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
     padding: 30px;
     border-radius: 10px;
 }
-
-
 
 #about_container {
     background-image: linear-gradient(0deg,rgba(122, 87, 74, 0.5),rgba(0,0,0,0.5)), url('./assets/about-bg.jpg'); /* Replace with your actual image path */
@@ -42,9 +47,10 @@ body {
     background-position: center; /* Centers the image */
     background-repeat: repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
+    animation: panBackground 30s linear infinite;
 }
 #about_container .center-content {
-    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
     padding: 30px;
     border-radius: 10px;
 }
@@ -55,9 +61,10 @@ body {
     background-position: center; /* Centers the image */
     background-repeat: repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
+    animation: panBackground 30s linear infinite;
 }
 #projects_container .center-content {
-    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
     padding: 30px;
     border-radius: 10px;
 }
@@ -68,9 +75,10 @@ body {
     background-position: center; /* Centers the image */
     background-repeat: repeat;
     color: #eee1ba;                 /* Makes text readable over the image */
+    animation: panBackground 30s linear infinite;
 }
 #contact_container .center-content {
-    background-color: rgba(201,130,118, 0.8); /* Optional: dark overlay for readability */
+    background-color: rgba(201,130,118, 0.25); /* Optional: dark overlay for readability */
     padding: 30px;
     border-radius: 10px;
 }
@@ -291,19 +299,19 @@ h1 .subtext-vertical {
     border-radius:100px 100px 0px 0px;
 }
 #projects:hover {
-    background:rgba(201,130,118,0.9);
+    background:rgba(201,130,118,0.5);
     cursor:pointer;
 }
 #about:hover {
-    background:rgba(201,130,118,0.9);
+    background:rgba(201,130,118,0.5);
     cursor:pointer;
 }
 #work:hover {
-    background:rgba(201,130,118,0.9);
+    background:rgba(201,130,118,0.5);
     cursor:pointer;
 }
 #contact:hover {
-    background:rgba(201,130,118,0.9);
+    background:rgba(201,130,118,0.5);
     cursor:pointer;
 }
 #middle table {
@@ -440,6 +448,18 @@ h1 .subtext-vertical {
     outline:none;
     border-bottom:3px solid rgba(255, 255, 255,1);
 }
+
+
+#contact_container a {
+    color: #eee1ba; /* your desired color */
+    text-decoration: none;
+}
+
+#contact_container a:hover {
+    color: rgb(201,130,118);
+    text-decoration: underline;
+}
+
 
 
 /* Summary icons */
