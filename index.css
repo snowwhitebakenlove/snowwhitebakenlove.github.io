@@ -22,11 +22,12 @@ body {
 }
 
 h1 {
-    display: inline-block;
+    display: flex;
     padding: 15px 25px;
     border-radius: 20px;
     margin: 0 auto;
     text-align: center;
+    justify-content: center;    /* center the entire h1 horizontally */
     border: 5px solid #eee1ba;
     position: relative;
     color: #eee1ba;
@@ -59,6 +60,27 @@ h1 {
     100% {
         background-position: 200%;
     }
+}
+
+h1 .highlight {
+    color: #eee1ba;
+    text-shadow: 2px 2px 5px #c97f76, 0 0 10px #eee1ba;
+    font-weight: 500;
+}
+
+h1 .subtext {
+    font-size: 20%;       /* smaller than SNOW WHITE */
+    color: #eee1ba;       /* optional color */
+    vertical-align: middle; /* aligns nicely with the main text */
+    font-weight: 400;
+}
+
+h1 .subtext-vertical {
+    writing-mode: vertical-rl; /* vertical text, top-to-bottom */
+    text-orientation: mixed;    /* rotate letters naturally */
+    font-size: 30%;       /* smaller than SNOW WHITE */
+    color: #eee1ba;
+    font-weight: 400;
 }
 
 
@@ -135,7 +157,8 @@ h1 {
 
 #middle h1 {
     color:rgb(238,225,186);
-    font-size:60px;
+    font-size:90px;
+    justify-content: center;    /* center the entire h1 horizontally */
     /*
     text-decoration:underline;
     */
@@ -488,6 +511,7 @@ h1 {
     #middle {
         width:90vw;
         padding:0px 5vw;
+        justify-content: center;    /* center the entire h1 horizontally */
     }
 
     #middle table {
@@ -523,21 +547,23 @@ h1 {
     }
 
     #middle h1 {
-        font-size: 38px;          /* smaller font */
         line-height: 1.2;         /* tighter spacing */
         padding: 0 10px;          /* reduce horizontal padding */
         text-align: center;       /* center-align for small screens */
     }
 
     #middle h1 .highlight {
-        padding: 2px 8px;         /* smaller padding inside gradient box */
-        font-size: 36px;
-        box-shadow: 0 0 8px rgba(201,130,118,0.6);
+        padding: 25px 8px;         /* smaller padding inside gradient box */
+        font-size: 40px;
     }
 
     #middle h2 {
         font-size: 20px;          /* reduce subheading size */
         margin-top: 5px;
+    }
+
+    #middle h1 .subtext-vertical {
+        font-size: 16px;       /* smaller than SNOW WHITE */
     }
 
 }
