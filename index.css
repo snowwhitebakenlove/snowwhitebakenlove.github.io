@@ -814,7 +814,7 @@ h1 .subtext-vertical {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    animation: panBackgroundMobile 90s linear infinite;
+    animation: panBackgroundMobile 120s linear infinite;
   }
 
   @keyframes panBackgroundMobile {
@@ -833,7 +833,7 @@ h1 .subtext-vertical {
     background-position: left center;
 
     /* 🌸 Use gentle background panning instead of zoom motion */
-    animation: panBackground 90s linear infinite alternate;
+    animation: panBackground 120s linear infinite alternate;
   }
 }
 
@@ -845,7 +845,7 @@ h1 .subtext-vertical {
   #work_container,
   #contact_container,
   #projects_container {
-    animation: panBackground 120s linear infinite;
+    animation: panBackground 150s linear infinite;
   }
 }
 
