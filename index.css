@@ -188,7 +188,7 @@ body,
 #projects_container,
 #contact_container {
   background-size: cover;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   color: #eee1ba;
   animation: panBackground 120s linear infinite;
@@ -810,11 +810,11 @@ h1 .subtext-vertical {
   #work_container,
   #projects_container,
   #contact_container {
-    background-position: left center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    animation: panBackgroundMobile 120s linear infinite;
+    background-position: left center;
+    animation: panBackgroundMobile 90s linear infinite;
   }
 
   @keyframes panBackgroundMobile {
@@ -824,16 +824,12 @@ h1 .subtext-vertical {
   }
 
   /* Body background animation for mobile */
- body {
-    min-height: 100vh;
-    min-height: 100dvh;
+  body {
+    min-height: 100dvh; /* fixes viewport height issue */
     background-attachment: scroll;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: left center;
-
-    /* 🌸 Use gentle background panning instead of zoom motion */
-    animation: panBackground 120s linear infinite alternate;
+    animation: panBackgroundMobile 90s linear infinite;
   }
 }
 
@@ -845,7 +841,7 @@ h1 .subtext-vertical {
   #work_container,
   #contact_container,
   #projects_container {
-    animation: panBackground 150s linear infinite;
+    animation: panBackground 120s linear infinite;
   }
 }
 
