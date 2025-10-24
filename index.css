@@ -47,6 +47,8 @@
 
 
 
+
+
 /* ============================= */
 /* DESKTOP + GENERAL STYLING */
 /* ============================= */
@@ -107,7 +109,101 @@ body,
 }
 
 
+/* =========================================== */
+/* SLIDE-IN ANIMATIONS (LEFT / RIGHT / UP / DOWN) */
+/* =========================================== */
 
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================== */
+/* SLIDE-OUT ANIMATIONS                        */
+/* =========================================== */
+
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
 
 /* =========================================== */
 /* BACKGROUND PAN ANIMATION                    */
@@ -117,66 +213,6 @@ body,
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-/* =========================================== */
-/* SLIDE-IN ANIMATIONS                         */
-/* =========================================== */
-@keyframes slideInLeft {
-  from { transform: translateX(-100%); opacity: 0; }
-  to   { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(100%); opacity: 0; }
-  to   { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInUp {
-  from { transform: translateY(100%); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInDown {
-  from { transform: translateY(-100%); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
-}
-
-/* =========================================== */
-/* SLIDE-OUT ANIMATIONS (on tab close or leave)*/
-/* =========================================== */
-@keyframes slideOutLeft {
-  from { transform: translateX(0); opacity: 1; }
-  to   { transform: translateX(-100%); opacity: 0; }
-}
-
-@keyframes slideOutRight {
-  from { transform: translateX(0); opacity: 1; }
-  to   { transform: translateX(100%); opacity: 0; }
-}
-
-@keyframes slideOutUp {
-  from { transform: translateY(0); opacity: 1; }
-  to   { transform: translateY(-100%); opacity: 0; }
-}
-
-@keyframes slideOutDown {
-  from { transform: translateY(0); opacity: 1; }
-  to   { transform: translateY(100%); opacity: 0; }
-}
-
-/* Shared class to trigger exit animation */
-.closing {
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-
-/* =========================================== */
-/* EXIT ANIMATION CLASS LINKS                  */
-/* =========================================== */
-.slide-out-left   { animation-name: slideOutLeft; }
-.slide-out-right  { animation-name: slideOutRight; }
-.slide-out-up     { animation-name: slideOutUp; }
-.slide-out-down   { animation-name: slideOutDown; }
 
 /* =========================================== */
 /* SHARED STYLES FOR ALL SECTIONS              */
@@ -206,24 +242,86 @@ body,
 /* INDIVIDUAL SECTION ANIMATIONS + IMAGES      */
 /* =========================================== */
 #about_container {
+  opacity: 0;
+  transform: translateX(-100%);
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/about-bg.jpg');
-  animation: panBackground 120s linear infinite, slideInLeft 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite;
+  animation-delay: 0.1s; /* optional smooth start */
+}
+#about_container.show {
+  animation: panBackground 120s linear infinite, slideInLeft 0.8s ease-out forwards;
 }
 
 #work_container {
+  opacity: 0;
+  transform: translateX(100%);
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/menu-bg.jpg');
-  animation: panBackground 120s linear infinite, slideInRight 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite;
+  animation-delay: 0.1s; /* optional smooth start */
+}
+#work_container.show {
+  animation: panBackground 120s linear infinite, slideInRight 0.8s ease-out forwards;
 }
 
 #projects_container {
+  opacity: 0;
+  transform: translateY(100%);
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/projects-bg.jpg');
-  animation: panBackground 120s linear infinite, slideInDown 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite;
+  animation-delay: 0.1s; /* optional smooth start */
+}
+#projects_container.show {
+  animation: panBackground 120s linear infinite, slideInDown 0.8s ease-out forwards;
 }
 
 #contact_container {
+  opacity: 0;
+  transform: translateY(-100%);
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/contact-bg.jpg');
-  animation: panBackground 120s linear infinite, slideInUp 0.9s ease-out 0s 1;
+  animation: slideInUp 1s ease-out forwards;
+  animation-delay: 0.1s; /* optional smooth start */
 }
+#contact_container.show {
+  animation: panBackground 120s linear infinite, slideInUp 0.8s ease-out forwards;
+}
+
+
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* =========================================== */
+/* SLIDE-OUT STATES                            */
+/* =========================================== */
+
+#about_container.hide {
+  animation: slideOutLeft 0.8s ease-in forwards, fadeOut 0.8s ease-in forwards;
+}
+
+#work_container.hide {
+  animation: slideOutRight 0.8s ease-in forwards, fadeOut 0.8s ease-in forwards;
+}
+
+#projects_container.hide {
+  animation: slideOutDown 0.8s ease-in forwards, fadeOut 0.8s ease-in forwards;
+}
+
+#contact_container.hide {
+  animation: slideOutUp 0.8s ease-in forwards, fadeOut 0.8s ease-in forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,6 +376,7 @@ h1 .highlight {
   color: #eee1ba;
   text-shadow: 2px 2px 5px #c97f76, 0 0 10px #eee1ba;
   font-weight: 500;
+  padding: 0px 22px;
 }
 
 h1 .subtext {
@@ -790,8 +889,8 @@ h1 .subtext-vertical {
   }
 
   #middle h1 .highlight {
-    padding: 25px 8px;
-    font-size: 44px;
+    padding: 30px 12px;
+    font-size: 36px;
   }
 
   #middle h2 {
@@ -803,6 +902,24 @@ h1 .subtext-vertical {
     font-size: 16px;
   }
 
+  /* Reduce heading size in all containers */
+  #about_container h1,
+  #work_container h1,
+  #projects_container h1,
+  #contact_container h1 {
+    font-size: 32px; /* adjust between 32–42px as you prefer */
+    line-height: 1.2;
+  }
+
+  /* Optional: tighten spacing inside highlighted span */
+  #about_container h1 .highlight,
+  #work_container h1 .highlight,
+  #projects_container h1 .highlight,
+  #contact_container h1 .highlight {
+    padding: 8px 12px;
+  }
+
+
   /* Background animation for mobile containers */
   #about_container,
   #work_container,
@@ -811,7 +928,8 @@ h1 .subtext-vertical {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    animation: panBackgroundMobile 60s linear infinite;
+    background-position: left center;
+    animation: panBackgroundMobile 90s linear infinite;
   }
 
   @keyframes panBackgroundMobile {
@@ -822,16 +940,13 @@ h1 .subtext-vertical {
 
   /* Body background animation for mobile */
   body {
+    min-height: 100vh;
+    min-height: 100dvh;
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: backgroundMotionMobile 90s ease-in-out infinite alternate;
-  }
-
-  @keyframes backgroundMotionMobile {
-    0%   { background-size: 100%; background-position: center top; }
-    50%  { background-size: 108%; background-position: center center; }
-    100% { background-size: 100%; background-position: center bottom; }
+    background-position: center  center;
+    animation: none;
   }
 }
 

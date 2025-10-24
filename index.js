@@ -66,3 +66,41 @@ setTimeout(function(){
       $("#work").removeClass("animated fadeIn");
     },1000);
 },1500);
+
+document.getElementById("about_container").classList.add("show");
+document.getElementById("work_container").classList.add("show");
+document.getElementById("projects_container").classList.add("show");
+document.getElementById("contact_container").classList.add("show");
+
+
+
+// 🌀 INITIAL LOADING FADE OUT
+setTimeout(function(){
+  $("#loading").addClass("fade-out");
+  setTimeout(function(){
+    $("#loading").css("display","none");
+    $("#box").css("display","none");
+  }, 800);
+}, 1500);
+
+// 🧭 SECTION SWITCH HANDLER
+function switchSection(showId) {
+  const sections = document.querySelectorAll('.container');
+
+  sections.forEach(section => {
+    if (section.id === showId) {
+      // show section
+      section.classList.remove('hide');
+      section.classList.add('show');
+      section.style.display = 'block';
+    } else {
+      // hide other sections
+      section.classList.remove('show');
+      section.classList.add('hide');
+      setTimeout(() => {
+        section.style.display = 'none';
+      }, 800); // matches CSS animation timing
+    }
+  });
+}
+
