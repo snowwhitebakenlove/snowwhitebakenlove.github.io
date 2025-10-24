@@ -68,7 +68,7 @@
   <header id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
     <h1>
       <span class="highlight">SNOW WHITE</span>
-      <span aria-hidden="true"> | </span>
+      <span> | </span>
       <span class="subtext-vertical">Bake n Love</span>
     </h1>
     <h2>Artisan Pastries | Gourmet Cakes | Boba Tea</h2>
@@ -238,6 +238,24 @@
     © 2025 SNOW WHITE | Bake n Love <br />
     Follow us on Instagram: <a href="https://www.instagram.com/snowwhitebakenlove/" target="_blank" rel="noopener">@snowwhitebakenlove</a>
   </footer>
-</body>
 
+
+
+  <script>
+  window.addEventListener("beforeunload", () => {
+    // Add a "closing" class to all containers before tab close
+    document.querySelectorAll("#about_container, #work_container, #projects_container, #contact_container").forEach((el) => {
+      // Pick direction based on the section for better effect
+      if (el.id === "about_container") el.classList.add("closing", "slide-out-left");
+      else if (el.id === "work_container") el.classList.add("closing", "slide-out-right");
+      else if (el.id === "projects_container") el.classList.add("closing", "slide-out-down");
+      else if (el.id === "contact_container") el.classList.add("closing", "slide-out-up");
+    });
+  });
+  </script>
+  
+
+  
+
+</body>
 </html>
