@@ -191,6 +191,8 @@ body,
   background-position: left;
   background-repeat: no-repeat;
   color: #eee1ba;
+  animation: panBackground 120s linear infinite;
+  animation-fill-mode: both;
 }
 
 #about_container .center-content,
@@ -207,22 +209,22 @@ body,
 /* =========================================== */
 #about_container {
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/about-bg.jpg');
-  animation: slideInLeft 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite, slideInLeft 0.9s ease-out 0s 1;
 }
 
 #work_container {
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/menu-bg.jpg');
-  animation: slideInRight 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite, slideInRight 0.9s ease-out 0s 1;
 }
 
 #projects_container {
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/projects-bg.jpg');
-  animation: slideInDown 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite, slideInDown 0.9s ease-out 0s 1;
 }
 
 #contact_container {
   background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/contact-bg.jpg');
-  animation: slideInUp 0.9s ease-out 0s 1;
+  animation: panBackground 120s linear infinite, slideInUp 0.9s ease-out 0s 1;
 }
 
 
