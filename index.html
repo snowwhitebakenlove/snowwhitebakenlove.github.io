@@ -2,205 +2,242 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Snow White | Bake & Love</title>
-    <link rel="icon" type="image" href="./assets/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Snow White | Bake & Love</title>
+  <meta name="description" content="Snow White | Bake & Love — artisan pastries, gourmet cakes, and boba tea. Catering, custom orders, online ordering, and local pick-up in Durham & Morrisville, NC." />
+  <link rel="canonical" href="/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+  <!-- App styles -->
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Snow White | Bake & Love" />
+  <meta property="og:description" content="Artisan pastries, gourmet cakes & boba tea. Catering and custom orders available." />
+  <meta property="og:image" content="./assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Scripts (deferred) -->
+  <script defer src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script defer src="index.js"></script>
+  <script defer src="particles.js"></script>
+  <script defer src="app.js"></script>
 </head>
 
 <body>
-    <div id="loading">
-        <div id="spinner"></div>
+  <noscript>
+    <div style="padding:1rem; text-align:center; background:#fffbdd;">This site works best with JavaScript enabled. You can still reach us at
+      <a href="mailto:susan.nguyen2203@gmail.com">susan.nguyen2203@gmail.com</a> or <a href="tel:+16263609908">(626) 360‑9908</a>.
     </div>
-    <div id="particles-js"></div>
-    <div id="box">
-        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
-        <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
+  </noscript>
+
+  <div id="loading" aria-hidden="true" role="status" aria-label="Loading">
+    <div id="spinner"></div>
+  </div>
+
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <div id="box" aria-hidden="true">
+    <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
+    <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
+    <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1900ms;"></div>
+    <div class="box2 animated bounceOutRight" style="animation-delay: 1900ms;"></div>
+    <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
+    <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
+  </div>
+
+  <!-- Primary nav (keeps original IDs for JS compatibility) -->
+  <nav aria-label="Primary">
+    <a id="about" href="#about_container" role="button" tabindex="0" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">OUR STORY</a>
+    <a id="work" href="#work_container" role="button" tabindex="0" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">MENU</a>
+    <a id="contact" href="#contact_container" role="button" tabindex="0" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">CONTACT</a>
+    <a id="projects" href="#projects_container" role="button" tabindex="0" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">CATERING</a>
+  </nav>
+
+  <header id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
+    <h1>
+      <span class="highlight">SNOW WHITE</span>
+      <span aria-hidden="true"> | </span>
+      <span class="subtext-vertical">Bake n Love</span>
+    </h1>
+    <h2>Artisan Pastries | Gourmet Cakes | Boba Tea</h2>
+    <div id="menu" role="navigation" aria-label="Section links">
+      <a href="#about_container" onclick="showabout()">about</a>
+      <a href="#work_container" onclick="showwork()">menu</a>
+      <a href="#projects_container" onclick="showprojects()">catering</a>
+      <a href="#contact_container" onclick="showcontact()">contact</a>
     </div>
-    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">OUR STORY</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">MENU</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">CONTACT</a>
-    <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">CATERING</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
-        <h1><span class="highlight">SNOW WHITE</span> | <span class="subtext-vertical">Bake n Love</span></h1>
-        <h2>Artisan Pastries | Gourmet Cakes | Boba Tea </h2>
-        <div id="menu">
-            <a onclick="showabout()">about</a>
-            <a onclick="showwork()">menu</a>
-            <a onclick="showprojects()">catering</a>
-            <a onclick="showcontact()">contact</a>
-        </div>
-        <table>
-            <tr>
-                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"
-                        href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank"><i class="fab fa-facebook"></i></a></td>
-                <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"
-                        href="https://www.instagram.com/snowwhitebakenlove/" target="_blank"><i class="fab fa-instagram"></i></a></td>
-                <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"
-                        href="mailto:susan.nguyen2203@gmail.com"><i class="fab fa-google"></i></a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="projects_container" class="container">
-        <div onclick="closeprojects()"><i class="fas fa-angle-up"></i> 🥐 Back</div>
-        <section class="center-content">
-            <h1><span class="highlight">CATERING</span></h1>
-            <p>
-                We offer <strong>event planning</strong> and <strong>bakery catering services</strong> tailored to your unique needs. 
-                With experience serving <strong>events of over 100 guests</strong>, our team ensures every detail is handled with care — 
-                from elegant dessert displays to customized pastry selections.
-            </p>
+    <table aria-label="Social links">
+      <tr>
+        <td class="animated zoomIn" style="animation-delay:2.4s;">
+          <a class="social" href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank" rel="noopener"> <i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+        </td>
+        <td class="animated zoomIn" style="animation-delay:2.6s;">
+          <a class="social" href="https://www.instagram.com/snowwhitebakenlove/" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+        </td>
+        <td class="animated zoomIn" style="animation-delay:2.8s;">
+          <a class="social" href="mailto:susan.nguyen2203@gmail.com"><i class="fab fa-google" aria-hidden="true"></i><span class="sr-only">Email</span></a>
+        </td>
+      </tr>
+    </table>
+  </header>
 
-            <p>
-                Your catering plan is <strong>fully customizable</strong>, featuring a variety of options to match your theme, budget, 
-                and guest preferences. We take pride in delivering our <strong>finest handcrafted pastries</strong> and exceptional service 
-                to make your event truly memorable.
-            </p>
+  <!-- CATERING -->
+  <div id="projects_container" class="container" aria-labelledby="projects">
+    <div role="button" tabindex="0" onclick="closeprojects()"><i class="fas fa-angle-up" aria-hidden="true"></i> 🥐 Back</div>
+    <section class="center-content">
+      <h1><span class="highlight">CATERING</span></h1>
+      <p>
+        We offer <strong>event planning</strong> and <strong>bakery catering services</strong> tailored to your unique needs.
+        With experience serving <strong>events of over 100 guests</strong>, our team ensures every detail is handled with care —
+        from elegant dessert displays to customized pastry selections.
+      </p>
 
-            <p>
-                Have any questions or special requests? <em>We’d love to hear from you!</em>
-            </p>
+      <p>
+        Your catering plan is <strong>fully customizable</strong>, featuring a variety of options to match your theme, budget,
+        and guest preferences. We take pride in delivering our <strong>finest handcrafted pastries</strong> and exceptional service
+        to make your event truly memorable.
+      </p>
 
-            <p><em>More details coming soon!</em></p>
-            <button class="btn_one"><a href="./assets/catering.pdf" target="_blank"
-                    style="color: inherit; text-decoration: none">Explore Our Catering Menu Sample</a></button>
-        </section>
-    </div>
-    <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i> 🥐 Back</div>
-        <section class="center-content">
-            <h1><span class="highlight">MENU</span></h1>
-            <h2>✨ Signature Pastries ✨</h2>
-            <ul class="services-list">
-                <li><strong>CROFFLE 🥐</strong> — A delightful fusion of croissant and waffle: buttery, flaky, and crisp on the outside.</li>
-                <li><strong>EGG TART 🍮</strong> — Smooth, creamy custard nestled in a golden, flaky pastry shell.</li>
-                <li><strong>CUSTART TART 🧁</strong> — Fresh seasonal berries over silky vanilla custard in a buttery tart crust.</li>
-                <li><strong>CANELÉ 🥧</strong> — A French classic with a caramelized crust and a soft, custardy center infused with vanilla.</li>
-                <li><strong>HONEYCOMB CAKE 🍯</strong> — A traditional Vietnamese delight with a chewy honeycomb texture and rich palm sugar aroma.</li>
-                <li><strong>MACARON 🍩</strong> — Crisp on the outside, chewy inside — available in a variety of seasonal flavors.</li>
-                <li><strong>TIRAMISU 🍰</strong> — Layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa.</li>
-            </ul>
-            <button class="btn_one"><a href="./assets/menu.pdf" target="_blank"
-                    style="color: inherit; text-decoration: none">Explore Our Pastries Menu</a></button>
+      <p>
+        Have any questions or special requests? <em>We’d love to hear from you!</em>
+      </p>
 
-            <h2>🍹 Beverages 🍹</h2>
-            <ul class="services-list">
-                <li><strong>PASSIONFRUIT & BERRY TEA 🧋</strong> — A vibrant blend of tropical passionfruit and mixed berries for a refreshing, fruity experience.</li>
-                <li><strong>CLASSIC PRETZEL COCOA ☕</strong> — Rich, velvety cocoa topped with pretzel crumbs for the perfect sweet–salty balance.</li>
-                <li><strong>VIETNAMESE COFFEE 🍵</strong> — Bold and aromatic, brewed the traditional way and sweetened with condensed milk.</li>
-            </ul>
+      <p><em>More details coming soon!</em></p>
+      <a class="btn_one" href="./assets/catering.pdf" target="_blank" rel="noopener">Explore Our Catering Menu Sample</a>
+    </section>
+  </div>
 
-            <button class="btn_one"><a href="./assets/menu.pdf" target="_blank"
-                    style="color: inherit; text-decoration: none">Explore Our Beverages Menu</a></button>
-            
-            <p class="footnote">
-                <sup>1</sup> All pastries are freshly baked daily with premium ingredients. Seasonal varieties may change based on availability.
-            </p>
-        </section>
-    </div>
+  <!-- MENU -->
+  <div id="work_container" class="container" aria-labelledby="work">
+    <div role="button" tabindex="0" onclick="closework()"><i class="fas fa-angle-right" aria-hidden="true"></i> 🥐 Back</div>
+    <section class="center-content">
+      <h1><span class="highlight">MENU</span></h1>
+      <h2>✨ Signature Pastries ✨</h2>
+      <ul class="services-list">
+        <li><strong>CROFFLE 🥐</strong> — A delightful fusion of croissant and waffle: buttery, flaky, and crisp on the outside.</li>
+        <li><strong>EGG TART 🍮</strong> — Smooth, creamy custard nestled in a golden, flaky pastry shell.</li>
+        <li><strong>CUSTARD TART 🧁</strong> — Fresh seasonal berries over silky vanilla custard in a buttery tart crust.</li>
+        <li><strong>CANELÉ 🥧</strong> — A French classic with a caramelized crust and a soft, custardy center infused with vanilla.</li>
+        <li><strong>HONEYCOMB CAKE 🍯</strong> — A traditional Vietnamese delight with a chewy honeycomb texture and rich palm sugar aroma.</li>
+        <li><strong>MACARON</strong> — Crisp on the outside, chewy inside — available in a variety of seasonal flavors.</li>
+        <li><strong>TIRAMISU 🍰</strong> — Layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa.</li>
+      </ul>
+      <a class="btn_one" href="./assets/menu.pdf" target="_blank" rel="noopener">Explore Our Pastries Menu</a>
 
+      <h2>🍹 Beverages 🍹</h2>
+      <ul class="services-list">
+        <li><strong>PASSIONFRUIT &amp; BERRY TEA 🧋</strong> — A vibrant blend of tropical passionfruit and mixed berries for a refreshing, fruity experience.</li>
+        <li><strong>CLASSIC PRETZEL COCOA ☕</strong> — Rich, velvety cocoa topped with pretzel crumbs for the perfect sweet–salty balance.</li>
+        <li><strong>VIETNAMESE COFFEE 🍵</strong> — Bold and aromatic, brewed the traditional way and sweetened with condensed milk.</li>
+      </ul>
 
-    <!-- ABOUT SECTION -->
-    <div id="about_container" class="container">
-        <div onclick="closeabout()"><i class="fas fa-angle-left"></i> 🥐 Back</div>
-        <section class="center-content">
-            <h1><span class="highlight">OUR STORY</span></h1>
-            <div class="about-logo">
-                <img src="./assets/logo.png" alt="Snow White Bake & Love Logo">
-            </div>    
-            <p>
-                Welcome to <strong>SNOW WHITE | Bake & Love</strong>, where traditional pastries meet a modern twist! 
-                Founded in <strong>2022</strong> in <strong>Durham, NC</strong>, our bakery was born from a passion for 
-                creating baked delights that are not only delicious but also spark joy. From our very first batch, we’ve been 
-                committed to blending the art of classic baking with innovative flavors and presentation. Our signature creation, 
-                the <strong>croffle</strong>, combines the buttery, flaky layers of a croissant with the golden crispiness of a waffle.
-            </p>
+      <a class="btn_one" href="./assets/menu.pdf" target="_blank" rel="noopener">Explore Our Beverages Menu</a>
 
-            <p>
-                Whether you’re celebrating a special occasion, looking for the perfect gift, or just treating yourself, we make it easy to enjoy our baked creations. 
-                We offer <strong>catering services</strong> for events, <strong>online orders with delivery</strong>, and <strong>local pick-up</strong> in Durham and Morrisville.
-                To complement our pastries, we serve authentic <strong>Vietnamese coffee</strong> and refreshing <strong>boba tea</strong>.
-            </p>
+      <p class="footnote">
+        <sup>1</sup> All pastries are freshly baked daily with premium ingredients. Seasonal varieties may change based on availability.
+      </p>
+    </section>
+  </div>
 
-            <p>
-                Our mission is simple: to bring happiness and connection through high-quality, handcrafted pastries, while honoring the rich traditions of Asian and Vietnamese baking. 
-                Every creation is made with <em>passion, love, and a sprinkle of magic</em>.
-            </p>
+  <!-- ABOUT -->
+  <div id="about_container" class="container" aria-labelledby="about">
+    <div role="button" tabindex="0" onclick="closeabout()"><i class="fas fa-angle-left" aria-hidden="true"></i> 🥐 Back</div>
+    <section class="center-content">
+      <h1><span class="highlight">OUR STORY</span></h1>
+      <div class="about-logo">
+        <img src="./assets/logo.png" alt="Snow White Bake &amp; Love Logo" loading="lazy" decoding="async" />
+      </div>
+      <p>
+        Welcome to <strong>SNOW WHITE | Bake &amp; Love</strong>, where traditional pastries meet a modern twist!
+        Founded in <strong>2022</strong> in <strong>Durham, NC</strong>, our bakery was born from a passion for
+        creating baked delights that are not only delicious but also spark joy. From our very first batch, we’ve been
+        committed to blending the art of classic baking with innovative flavors and presentation. Our signature creation,
+        the <strong>croffle</strong>, combines the buttery, flaky layers of a croissant with the golden crispiness of a waffle.
+      </p>
 
-            <h2>Our Services</h2>
+      <p>
+        Whether you’re celebrating a special occasion, looking for the perfect gift, or just treating yourself, we make it easy to enjoy our baked creations.
+        We offer <strong>catering services</strong> for events, <strong>online orders with delivery</strong>, and <strong>local pick-up</strong> in Durham and Morrisville.
+        To complement our pastries, we serve authentic <strong>Vietnamese coffee</strong> and refreshing <strong>boba tea</strong>.
+      </p>
 
-            <div class="services-summary">
-                <div class="service-item"><i class="fas fa-circle"></i> Catering</div>
-                <div class="service-item"><i class="fas fa-circle"></i> Custom Orders</div>
-                <div class="service-item"><i class="fas fa-circle"></i> Online Ordering</div>
-                <div class="service-item"><i class="fas fa-circle"></i> Local Pick-Up</div>
-            </div>
+      <p>
+        Our mission is simple: to bring happiness and connection through high-quality, handcrafted pastries, while honoring the rich traditions of Asian and Vietnamese baking.
+        Every creation is made with <em>passion, love, and a sprinkle of magic</em>.
+      </p>
 
-            <ul class="services-list">
-                <li><strong>Catering for events and celebrations:</strong> Beautifully crafted pastry platters and desserts, perfect for weddings, birthdays, corporate events, and any special occasion.</li>
-                <li><strong>Custom orders and specialty cakes:</strong> Personalized flavors, designs, and themes to make your celebration truly one-of-a-kind.</li>
-                <li><strong>Online ordering with delivery:</strong> Enjoy your favorite baked goods conveniently delivered straight to your doorstep.</li>
-                <li><strong>Local pick-up:</strong> Place your order online and pick it up easily at our Durham or Morrisville locations.</li>
-            </ul>
+      <h2>Our Services</h2>
 
-            <p class="footnote">
-                <sup class="fn1">1</sup> All pastries are freshly baked daily. Some items may be seasonal.
-            </p>
-        </section>
-    </div>
+      <div class="services-summary" role="list">
+        <div class="service-item" role="listitem"><i class="fas fa-circle" aria-hidden="true"></i> Catering</div>
+        <div class="service-item" role="listitem"><i class="fas fa-circle" aria-hidden="true"></i> Custom Orders</div>
+        <div class="service-item" role="listitem"><i class="fas fa-circle" aria-hidden="true"></i> Online Ordering</div>
+        <div class="service-item" role="listitem"><i class="fas fa-circle" aria-hidden="true"></i> Local Pick-Up</div>
+      </div>
 
-    <!-- CONTACT SECTION -->
-    <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-down"></i> 🥐 Back</div>
-        <section class="center-content">
-            <h1><span class="highlight">CONTACT</span></h1>
-            <p>
-                We’d love to hear from you! Whether you have a question about our pastries, want to place a catering order<sup class="fn2">2</sup>, 
-                or just want to say hello, you can reach us via:
-            </p>
+      <ul class="services-list">
+        <li><strong>Catering for events and celebrations:</strong> Beautifully crafted pastry platters and desserts, perfect for weddings, birthdays, corporate events, and any special occasion.</li>
+        <li><strong>Custom orders and specialty cakes:</strong> Personalized flavors, designs, and themes to make your celebration truly one-of-a-kind.</li>
+        <li><strong>Online ordering with delivery:</strong> Enjoy your favorite baked goods conveniently delivered straight to your doorstep.</li>
+        <li><strong>Local pick-up:</strong> Place your order online and pick it up easily at our Durham or Morrisville locations.</li>
+      </ul>
 
-            <div id="used">
-                <div><i class="fas fa-circle"></i>&nbsp;<strong>Phone:</strong> (626) 360-9908</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Email:</strong> <a href="mailto:susan.nguyen2203@gmail.com">susan.nguyen2203@gmail.com</a></div>
-                <div><i class="fas fa-circle"></i>&nbsp;Instagram:</strong> <a href="https://www.instagram.com/snowwhitebakenlove" target="_blank">@snowwhitebakenlove</a></div>
-                <div><i class="fas fa-circle"></i>&nbsp;<strong>Facebook:</strong> <a href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank">Snow White Bake and Love</a></div>
-            </div>
+      <p class="footnote">
+        <sup class="fn1">1</sup> All pastries are freshly baked daily. Some items may be seasonal.
+      </p>
+    </section>
+  </div>
 
-            <p>Or, send us a message directly using the form below:</p>
+  <!-- CONTACT -->
+  <div id="contact_container" class="container" aria-labelledby="contact">
+    <div role="button" tabindex="0" onclick="closecontact()"><i class="fas fa-angle-down" aria-hidden="true"></i> 🥐 Back</div>
+    <section class="center-content">
+      <h1><span class="highlight">CONTACT</span></h1>
+      <p>
+        We’d love to hear from you! Whether you have a question about our pastries, want to place a catering order<sup class="fn2">2</sup>,
+        or just want to say hello, you can reach us via:
+      </p>
 
-            <form action="https://formcarry.com/s/3-WuZA6BRIV" method="POST" class="formcarry-form">
-                <input name="name" type="text" placeholder="Name" required aria-label="Name"/>
-                <input name="email" type="email" placeholder="Email" required aria-label="Email"/><br>
-                <textarea name="message" placeholder="Your message" required rows="3" aria-label="Your message"></textarea><br>
-                <button class="btn_one" aria-label="Send Message">Send</button>
-            </form>
+      <div id="used">
+        <div><i class="fas fa-circle" aria-hidden="true"></i>&nbsp;<strong>Phone:</strong> <a href="tel:+16263609908">(626) 360‑9908</a></div>
+        <div><i class="fas fa-circle" aria-hidden="true"></i>&nbsp;<strong>Email:</strong> <a href="mailto:susan.nguyen2203@gmail.com">susan.nguyen2203@gmail.com</a></div>
+        <div><i class="fas fa-circle" aria-hidden="true"></i>&nbsp;<strong>Instagram:</strong> <a href="https://www.instagram.com/snowwhitebakenlove" target="_blank" rel="noopener">@snowwhitebakenlove</a></div>
+        <div><i class="fas fa-circle" aria-hidden="true"></i>&nbsp;<strong>Facebook:</strong> <a href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank" rel="noopener">Snow White Bake and Love</a></div>
+      </div>
 
-            <p>We look forward to connecting with you and sharing the magic of our pastries!</p>
+      <p>Or, send us a message directly using the form below:</p>
 
-            <p class="footnote">
-                <sup class="fn2">2</sup> We respond to messages within 24 hours. Please allow extra time during holidays.
-            </p>
-        </section>
-    </div>
-   
-    <div id="footer">
-        © 2025 SNOW WHITE | Bake n Love <br> Follow us on Instagram: <a href="https://www.instagram.com/snowwhitebakenlove/" target="_blank">@snowwhitebakenlove</a>
-    </div>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
+      <form action="https://formcarry.com/s/3-WuZA6BRIV" method="POST" class="formcarry-form">
+        <input name="name" type="text" placeholder="Name" required aria-label="Name" autocomplete="name" />
+        <input name="email" type="email" placeholder="Email" required aria-label="Email" autocomplete="email" /><br />
+        <textarea name="message" placeholder="Your message" required rows="3" aria-label="Your message" autocomplete="off"></textarea><br />
+        <button class="btn_one" aria-label="Send Message" type="submit">Send</button>
+      </form>
+
+      <p>We look forward to connecting with you and sharing the magic of our pastries!</p>
+
+      <p class="footnote">
+        <sup class="fn2">2</sup> We respond to messages within 24 hours. Please allow extra time during holidays.
+      </p>
+    </section>
+  </div>
+
+  <footer id="footer">
+    © 2025 SNOW WHITE | Bake n Love <br />
+    Follow us on Instagram: <a href="https://www.instagram.com/snowwhitebakenlove/" target="_blank" rel="noopener">@snowwhitebakenlove</a>
+  </footer>
 </body>
 
 </html>
