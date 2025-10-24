@@ -831,10 +831,8 @@ h1 .subtext-vertical {
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left center;
-
-    /* 🌸 Use gentle background panning instead of zoom motion */
-    animation: panBackground 90s linear infinite alternate;
+    background-position: center  center;
+    animation: none;
   }
 }
 
