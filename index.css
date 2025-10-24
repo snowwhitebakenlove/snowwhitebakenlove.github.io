@@ -280,6 +280,7 @@ h1 .highlight {
   color: #eee1ba;
   text-shadow: 2px 2px 5px #c97f76, 0 0 10px #eee1ba;
   font-weight: 500;
+  padding: 0px 22px;
 }
 
 h1 .subtext {
@@ -792,8 +793,8 @@ h1 .subtext-vertical {
   }
 
   #middle h1 .highlight {
-    padding: 25px 8px;
-    font-size: 40px;
+    padding: 30px 12px;
+    font-size: 36px;
   }
 
   #middle h2 {
@@ -825,11 +826,15 @@ h1 .subtext-vertical {
 
   /* Body background animation for mobile */
   body {
-    min-height: 100dvh; /* fixes viewport height issue */
+    min-height: 100vh;
+    min-height: 100dvh;
     background-attachment: scroll;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: left center;
-    animation: panBackgroundMobile 90s linear infinite;
+
+    /* 🌸 Use gentle background panning instead of zoom motion */
+    animation: panBackground 90s linear infinite alternate;
   }
 }
 
