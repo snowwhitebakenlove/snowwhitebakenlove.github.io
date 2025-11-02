@@ -67,7 +67,7 @@ body {
         rgba(90, 68, 60, 0.4),
         rgba(0, 0, 0, 0.55)
     ),
-    url("./assets/main_bg.jpg") center center no-repeat;
+    url("./assets/main_bg.JPG") center center no-repeat;
     background-size: cover;
 
     /* Smooth zoom + motion animation */
@@ -245,7 +245,7 @@ body,
 #about_container {
   opacity: 0;
   transform: translateX(-100%);
-  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/about-bg.jpg');
+  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/about-bg.JPG');
   animation: panBackground 120s linear infinite;
   animation-delay: 0.1s; /* optional smooth start */
 }
@@ -256,7 +256,7 @@ body,
 #work_container {
   opacity: 0;
   transform: translateX(100%);
-  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/menu-bg.jpg');
+  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/menu-bg.JPG');
   animation: panBackground 120s linear infinite;
   animation-delay: 0.1s; /* optional smooth start */
 }
@@ -267,7 +267,7 @@ body,
 #projects_container {
   opacity: 0;
   transform: translateY(100%);
-  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/projects-bg.jpg');
+  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/projects-bg.JPG');
   animation: panBackground 120s linear infinite;
   animation-delay: 0.1s; /* optional smooth start */
 }
@@ -278,7 +278,7 @@ body,
 #contact_container {
   opacity: 0;
   transform: translateY(-100%);
-  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/contact-bg.jpg');
+  background-image: linear-gradient(0deg, rgba(122,87,74,0.5), rgba(0,0,0,0.5)), url('./assets/contact-bg.JPG');
   animation: slideInUp 1s ease-out forwards;
   animation-delay: 0.1s; /* optional smooth start */
 }
