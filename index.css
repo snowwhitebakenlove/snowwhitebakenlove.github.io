@@ -63,10 +63,11 @@ body {
     /* Background setup */
     background: linear-gradient(
         0deg,
-        rgba(122, 87, 74, 0.5),
-        rgba(0, 0, 0, 0.5)
+        rgba(90, 68, 60, 0.25),
+        rgba(90, 68, 60, 0.4),
+        rgba(0, 0, 0, 0.55)
     ),
-    url("./assets/main_bg.jpeg") center center no-repeat;
+    url("./assets/main_bg.jpg") center center no-repeat;
     background-size: cover;
 
     /* Smooth zoom + motion animation */
@@ -233,7 +234,7 @@ body,
 #work_container .center-content,
 #projects_container .center-content,
 #contact_container .center-content {
-  background-color: rgba(201,130,118, 0.25);
+  background-color: rgba(71, 44, 39, 0.5);
   padding: 30px;
   border-radius: 10px;
 }
@@ -963,8 +964,44 @@ h1 .subtext-vertical {
 }
 
 
+.formcarry-form input,
+.formcarry-form select,
+.formcarry-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
 
+.formcarry-form select {
+  appearance: none;
+  background-color: #eee1ba;
+  color: rgb(201, 130, 118);
+}
 
+.menu-interest {
+  display: flex;
+  gap: 1.5rem; /* spacing between each option */
+  align-items: center;
+  flex-wrap: nowrap; /* keep them on one line */
+}
+
+.menu-interest label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* small space between checkbox and text */
+  white-space: nowrap; /* prevent wrapping if labels are long */
+  font-size: 1rem;
+}
+
+.menu-interest input[type="checkbox"] {
+  accent-color: #f7a9a8; /* soft pastel pink */
+}
 
 
 

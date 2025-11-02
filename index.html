@@ -126,7 +126,9 @@
       <span> | </span>
       <span class="subtext-vertical">Bake n Love</span>
     </h1>
-    <h2>Artisan Pastries | Gourmet Cakes | Boba Tea</h2>
+    <h2>Artisan Pastries | Gourmet Cakes | Coffee & Tea</h2>
+    
+
     <div id="menu" role="navigation" aria-label="Section links">
       <a href="#about_container" onclick="showabout()">about</a>
       <a href="#work_container" onclick="showwork()">menu</a>
@@ -146,6 +148,10 @@
         </td>
       </tr>
     </table>
+
+    <div class="hero-btn-container">
+      <a class="btn_one" href="#contact_container" onclick="showcontact()" class="btn-book-event">Book Your Event</a>
+    </div>
   </header>
 
   <!-- CATERING -->
@@ -169,9 +175,58 @@
         Have any questions or special requests? <em>We’d love to hear from you!</em>
       </p>
 
-      <p><em>More details coming soon!</em></p>
       <a class="btn_one" href="./assets/catering.pdf" target="_blank" rel="noopener">Explore Our Catering Menu Sample</a>
+
+      <h2>Send Us Your Catering Inquiry:</h2>
+
+      <form action="https://formcarry.com/s/3-WuZA6BRIV" method="POST" class="formcarry-form">
+        <input name="name" type="text" placeholder="Your Name" required aria-label="Name" autocomplete="name" />
+        <input name="email" type="email" placeholder="Your Email" required aria-label="Email" autocomplete="email" />
+        <input name="phone" type="tel" placeholder="Phone Number (optional)" aria-label="Phone Number" autocomplete="tel" />
+        <input name="guest_count" type="number" placeholder="Number of Guests" min="1" required aria-label="Number of Guests" autocomplete="off" />
+        <span>Estimated Event Date:</span>
+        <input name="event_date" type="date" required aria-label="Estimated Event Date" placeholder="Estimated Event Date" />
+
+        <!-- Menu Interest -->
+        <div class="menu-interest">
+          <span>What would you like us to provide?</span>
+          <label><input type="checkbox" name="menu_interest" value="Pastries & Desserts" /> Pastries & Desserts</label>
+          <label><input type="checkbox" name="menu_interest" value="Drinks & Beverages" /> Drinks & Beverages</label>
+          <label><input type="checkbox" name="menu_interest" value="Decor Setup" /> Decor Setup</label>
+          <label><input type="checkbox" name="menu_interest" value="Serving Staff" /> Serving Staff</label>
+          <label><input type="checkbox" name="menu_interest" value="Full Package" /> Full Catering Package</label>
+        </div>
+        
+        <select name="event_type" required aria-label="Type of Event" class="form-input">
+          <option value="" disabled selected>Select Event Type</option>
+          <option value="Corporate Event">Corporate Event</option>
+          <option value="Grand Opening">Grand Opening</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Banquet">Banquet</option>
+          <option value="Private Celebration">Private Celebration</option>
+          <option value="Other Special Event">Other Special Event</option>
+        </select>
+
+        <select name="referral_source" aria-label="How did you hear about us?">
+          <option value="" disabled selected>How did you hear about us?</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Google">Google Search</option>
+          <option value="Friend or Family">Friend or Family</option>
+          <option value="Event or Vendor">Event or Vendor Partner</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Tell us more about your event (venue, time, special requests, menu ideas...)" required rows="6" aria-label="Event Details" autocomplete="off"></textarea>
+        
+        <button class="btn_one" aria-label="Send Catering Inquiry" type="submit">Send Inquiry</button>
+      </form>
+
+      <p>We look forward to catering your special event with the magic of our pastries and desserts!</p>
+
     </section>
+    
   </div>
 
   <!-- MENU -->
@@ -272,20 +327,60 @@
         <div><i class="fas fa-circle" aria-hidden="true"></i>&nbsp;<strong>Facebook:</strong> <a href="https://www.facebook.com/SnowWhiteBakenLove" target="_blank" rel="noopener">Snow White Bake and Love</a></div>
       </div>
 
-      <p>Or, send us a message directly using the form below:</p>
+      <p>Planning an event? Send us your catering inquiry below — we’d love to make it unforgettable!</p>
 
       <form action="https://formcarry.com/s/3-WuZA6BRIV" method="POST" class="formcarry-form">
-        <input name="name" type="text" placeholder="Name" required aria-label="Name" autocomplete="name" />
-        <input name="email" type="email" placeholder="Email" required aria-label="Email" autocomplete="email" /><br />
-        <textarea name="message" placeholder="Your message" required rows="3" aria-label="Your message" autocomplete="off"></textarea><br />
-        <button class="btn_one" aria-label="Send Message" type="submit">Send</button>
+        <input name="name" type="text" placeholder="Your Name" required aria-label="Name" autocomplete="name" />
+        <input name="email" type="email" placeholder="Your Email" required aria-label="Email" autocomplete="email" />
+        <input name="phone" type="tel" placeholder="Phone Number (optional)" aria-label="Phone Number" autocomplete="tel" />
+        <input name="guest_count" type="number" placeholder="Number of Guests" min="1" required aria-label="Number of Guests" autocomplete="off" />
+        <span>Estimated Event Date:</span>
+        <input name="event_date" type="date" required aria-label="Estimated Event Date" placeholder="Estimated Event Date" />
+
+        <!-- Menu Interest -->
+        <div class="menu-interest">
+          <span>What would you like us to provide?</span>
+          <label><input type="checkbox" name="menu_interest" value="Pastries & Desserts" /> Pastries & Desserts</label>
+          <label><input type="checkbox" name="menu_interest" value="Drinks & Beverages" /> Drinks & Beverages</label>
+          <label><input type="checkbox" name="menu_interest" value="Decor Setup" /> Decor Setup</label>
+          <label><input type="checkbox" name="menu_interest" value="Serving Staff" /> Serving Staff</label>
+          <label><input type="checkbox" name="menu_interest" value="Full Package" /> Full Catering Package</label>
+        </div>
+        
+        <select name="event_type" required aria-label="Type of Event" class="form-input">
+          <option value="" disabled selected>Select Event Type</option>
+          <option value="Corporate Event">Corporate Event</option>
+          <option value="Grand Opening">Grand Opening</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Banquet">Banquet</option>
+          <option value="Private Celebration">Private Celebration</option>
+          <option value="Other Special Event">Other Special Event</option>
+        </select>
+
+        <select name="referral_source" aria-label="How did you hear about us?">
+          <option value="" disabled selected>How did you hear about us?</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Google">Google Search</option>
+          <option value="Friend or Family">Friend or Family</option>
+          <option value="Event or Vendor">Event or Vendor Partner</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Tell us more about your event (venue, time, special requests, menu ideas...)" required rows="6" aria-label="Event Details" autocomplete="off"></textarea>
+        
+        <button class="btn_one" aria-label="Send Catering Inquiry" type="submit">Send Inquiry</button>
       </form>
 
-      <p>We look forward to connecting with you and sharing the magic of our pastries!</p>
+      <p>We look forward to catering your special event with the magic of our pastries and desserts!</p>
 
       <p class="footnote">
-        <sup class="fn2">2</sup> We respond to messages within 24 hours. Please allow extra time during holidays.
+        <sup class="fn2">2</sup> We respond to catering inquiries within 24 hours. Please allow extra time during holidays.
       </p>
+
+
+
     </section>
   </div>
 
