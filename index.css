@@ -347,6 +347,15 @@ h1 {
   box-shadow: 0 0 5px #eee1ba, 0 0 10px rgba(201,130,118,0.5);
 }
 
+/* Reduce heading h2 size in all containers */
+#about_container h2,
+#work_container h2,
+#projects_container h2,
+#contact_container h2 {
+  font-size: 32px; /* adjust between 32–42px as you prefer */
+  line-height: 1.2;
+}
+
 /* =========================================== */
 /* GLOW ANIMATION                              */
 /* =========================================== */
@@ -1082,29 +1091,6 @@ h1 .subtext-vertical {
 }
 
 
-/* ===== Back to Top Button ===== */
-#backToTop {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #f7a9a8; /* pastel pink */
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: none; /* hidden until scroll */
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-#backToTop:hover {
-  background-color: #f38c8c;
-  transform: translateY(-3px);
-}
 
 
 
