@@ -964,46 +964,122 @@ h1 .subtext-vertical {
 }
 
 
+
+
+/* ====== FORM STYLING ====== */
 .formcarry-form input,
 .formcarry-form select,
 .formcarry-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 10px 12px;
   margin-top: 8px;
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: inherit;
   box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Subtle focus effect for form fields */
+.formcarry-form input:focus,
+.formcarry-form select:focus,
+.formcarry-form textarea:focus {
+  border-color: #f7a9a8;
+  box-shadow: 0 0 5px rgba(247, 169, 168, 0.4);
+  outline: none;
+}
+
+/* Soft pastel dropdown look */
 .formcarry-form select {
   appearance: none;
   background-color: #eee1ba;
   color: rgb(201, 130, 118);
+  cursor: pointer;
 }
 
+/* ====== MENU INTEREST SECTION ====== */
 .menu-interest {
   display: flex;
-  gap: 1.5rem; /* spacing between each option */
+  gap: 1.5rem; /* spacing between options */
   align-items: center;
-  flex-wrap: nowrap; /* keep them on one line */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  margin: 1rem 0;
 }
 
 .menu-interest label {
   display: flex;
   align-items: center;
-  gap: 0.25rem; /* small space between checkbox and text */
-  white-space: nowrap; /* prevent wrapping if labels are long */
+  gap: 0.25rem;
+  white-space: nowrap;
   font-size: 1rem;
+  color: #eee1ba;
 }
 
 .menu-interest input[type="checkbox"] {
   accent-color: #f7a9a8; /* soft pastel pink */
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ====== MENU ITEM IMAGES ====== */
+.services-list img {
+  width: 60%;
+  display: block;
+  margin: 0 auto 1rem;  /* centers horizontally and adds spacing */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-list img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.services-list li {
+  text-align: center;
 }
 
 
+
+/* ====== MOBILE RESPONSIVE STYLES ====== */
+@media (max-width: 768px) {
+  /* === Form Section === */
+  .formcarry-form input,
+  .formcarry-form select,
+  .formcarry-form textarea {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  .formcarry-form textarea {
+    min-height: 120px;
+  }
+
+  .menu-interest {
+    flex-direction: column; /* stack checkboxes vertically */
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .menu-interest label {
+    font-size: 0.95rem;
+  }
+
+  /* === Menu Image Section === */
+  .services-list img {
+    width: 90%;          /* full-width image look */
+    margin: 0 auto 1rem; /* center image with spacing */
+    height: auto;
+  }
+
+  .services-list li {
+    text-align: center;  /* center text for mobile */
+    margin-bottom: 1.5rem;
+  }
+}
 
 
 
