@@ -307,7 +307,13 @@
           </div>
           <img src="./assets/menu/cheese.JPG" alt="Cheese and Salami" />
         </li>
-
+        <li>
+          <div class="menu-info">
+            <strong>CARAMEL FLAN</strong>
+            <p>Flan</p>
+          </div>
+          <img src="./assets/menu/flan.JPG" alt="Flan" />
+        </li>
       </ul>
       
 
@@ -463,7 +469,7 @@
       </p>
 
 
-
+      
     </section>
   </div>
 
@@ -472,7 +478,7 @@
     Follow us on Instagram: <a href="https://www.instagram.com/snowwhitebakenlove/" target="_blank" rel="noopener">@snowwhitebakenlove</a>
   </footer>
 
-
+  
 
   <script>
   window.addEventListener("beforeunload", () => {
@@ -486,5 +492,31 @@
     });
   });
   </script>
+
+    <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to Top">🍩</button>
+
+  <script>
+    // Show button when user scrolls down 300px
+    window.addEventListener("scroll", function () {
+      const button = document.getElementById("backToTop");
+      if (window.scrollY > 300) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    });
+
+    // Smooth scroll back to top
+    document.getElementById("backToTop").addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+
+  
 </body>
 </html>
